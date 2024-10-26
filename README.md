@@ -76,7 +76,15 @@ mpremote mip install github:miketeachman/micropython-rotary
 | ------------- | ------------- |
 | RotaryIRQ.RANGE_UNBOUNDED | encoder has no bounds on the counting range |
 | RotaryIRQ.RANGE_WRAP | encoder will count up to max_val then wrap to minimum value (similar behaviour for count down) |
-| RotaryIRQ.RANGE_BOUNDED |  encoder will count up to max_val then stop.  Count down stops at min_val |              
+| RotaryIRQ.RANGE_BOUNDED |  encoder will count up to max_val then stop.  Count down stops at min_val |  
+
+#### Special arguments for mcp version
+| argument       | description           | value |
+|-------------|-------------|---------|  
+| mcp | the mcp object to use | object (mcp module from https://github.com/dsiggi/micropython-mcp230xx) |
+| pin_num_clk | mcp GPIO pin connected to encoder CLK pin | integer |
+| pin_num_dt | GPIO pin connected to encoder DT pin |  integer |
+| pin_num_int | GPIO pin connected to mcp INTA/INTB pin | integer |
       
 ### Methods     
 `value()` Return the encoder value
